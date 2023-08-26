@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "online-tickets": {
+    "lazadee": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/online-tickets",
+            "outputPath": "dist/lazadee",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -50,7 +50,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -85,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "online-tickets:build:production"
+              "browserTarget": "lazadee:build:production"
             },
             "development": {
-              "browserTarget": "online-tickets:build:development"
+              "browserTarget": "lazadee:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -96,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "online-tickets:build"
+            "browserTarget": "lazadee:build"
           }
         },
         "test": {
@@ -119,5 +121,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
